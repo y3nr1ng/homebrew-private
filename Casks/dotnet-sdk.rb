@@ -20,6 +20,7 @@ cask "dotnet-sdk" do
     regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk-v?(\d+(?:\.\d+)+)-osx-#{arch}\.pkg}i)
   end
 
+  auto_updates true
   conflicts_with cask: [
     "dotnet",
     "homebrew/cask-versions/dotnet-preview",
@@ -29,8 +30,6 @@ cask "dotnet-sdk" do
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   binary "/usr/local/share/dotnet/dotnet"
-
-  auto_updates true
 
   uninstall pkgutil: [
               "com.microsoft.dotnet.*",
