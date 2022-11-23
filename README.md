@@ -1,4 +1,4 @@
-# Y3nr1ng Private
+# Private casks and formulae
 
 ## How do I install these formulae?
 
